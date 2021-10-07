@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "xctest-interface-adapter",
+        "repositoryURL": "https://github.com/Incetro/xctest-interface-adapter",
+        "state": {
+          "branch": "master",
+          "revision": "415942e4609fd58027a085de8592e18e86beb23b",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}
