@@ -10,10 +10,12 @@ import Darwin
 
 // MARK: - Aliases
 
+@available(macOS 10.12, iOS 10, tvOS 10, watchOS 3, *)
 typealias Lock = os_unfair_lock_t
 
 // MARK: - Lock
 
+@available(macOS 10.12, iOS 10, tvOS 10, watchOS 3, *)
 extension UnsafeMutablePointer where Pointee == os_unfair_lock_s {
 
     /// Lock initializer

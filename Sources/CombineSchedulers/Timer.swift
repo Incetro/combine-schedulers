@@ -6,11 +6,14 @@
 //  Copyright © 2021 Incetro Inc. All rights reserved.
 //
 
+#if !(os(iOS) && (arch(i386) || arch(arm))) && canImport(Combine)
+
 import Combine
 import Foundation
 
 // MARK: - Scheduler
 
+@available(macOS 10.15, iOS 13.0, tvOS 13.0, watchOS 6.0, *)
 extension Scheduler {
 
     /// Returns a publisher that repeatedly emits the scheduler's current time on the given
@@ -39,6 +42,7 @@ extension Scheduler {
 
 // MARK: - Timer
 
+@available(macOS 10.15, iOS 13.0, tvOS 13.0, watchOS 6.0, *)
 extension Publishers {
 
     /// A publisher that emits a scheduler's current time on a repeating interval
@@ -394,3 +398,5 @@ extension Publishers {
         }
     }
 }
+
+#endif /* !(os(iOS) && (arch(i386) || arch(arm))) */
